@@ -5,16 +5,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import test.app.kotlin.bdroom.Word
 
 class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
 
+    private var words = emptyList<Word>() // Cached copy of words
+
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.mtitle.text = dataText()[position]
+       // val current = words[position]
+        holder.mtitle.text = "k;kl"
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return 5
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -25,24 +29,16 @@ class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
 
     }
 
-
-    companion object
-    fun dataText(): MutableList<String> {
-        val mutlist = mutableListOf<String>()
-        for (i in 0..9){
-            mutlist.add("$i")
-        }
-        return mutlist
+    internal fun setWords(words: List<Word>) {
+        this.words = words
+        notifyDataSetChanged()
     }
+
 }
 
 
 class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     val mtitle:TextView = itemView.findViewById(R.id.text_container)
-}
-
-class abudam(labut :String){
-    val a :String = labut
 }
 
 

@@ -17,14 +17,17 @@ class MainActivity : AppCompatActivity() {
        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = RecyclerViewAdapter()
-
+/*
         val db: WordRoomDatabase = Room.databaseBuilder<WordRoomDatabase>(
             applicationContext,
             WordRoomDatabase::class.java, "database"
         ).build()
 
+ */
 
-        val wordDao: WordDao
+       // val wordDao: WordDao
+
+
 
     }
 
