@@ -1,18 +1,18 @@
 package test.app.kotlin.bdroom
 
+import android.app.Application
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Word::class], version = 1, exportSchema = false)
-abstract class WordRoomDatabase : RoomDatabase() {
-
+    @Database(entities = [Word::class], version = 1)
+    abstract class WordRoomDatabase : RoomDatabase() {
     abstract fun wordDao(): WordDao
 
+    /*
     companion object {
-        // Singleton prevents multiple instances of database opening at the
-        // same time.
+
         @Volatile
         private var INSTANCE: WordRoomDatabase? = null
 
@@ -32,4 +32,6 @@ abstract class WordRoomDatabase : RoomDatabase() {
             }
         }
     }
+
+     */
 }

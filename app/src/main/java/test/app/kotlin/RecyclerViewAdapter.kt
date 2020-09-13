@@ -18,7 +18,7 @@ class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return 10
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -35,7 +35,6 @@ class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
     }
 
 }
-
 
 class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     val mtitle:TextView = itemView.findViewById(R.id.text_container)

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import test.app.kotlin.bdroom.Word
 import test.app.kotlin.bdroom.WordDao
 import test.app.kotlin.bdroom.WordRoomDatabase
 
@@ -17,15 +18,18 @@ class MainActivity : AppCompatActivity() {
        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = RecyclerViewAdapter()
-/*
-        val db: WordRoomDatabase = Room.databaseBuilder<WordRoomDatabase>(
+
+
+        var db = Room.databaseBuilder(
             applicationContext,
-            WordRoomDatabase::class.java, "database"
-        ).build()
+            WordRoomDatabase::class.java,"database")
+            .build()
 
- */
+        val wordDao: WordDao = db.wordDao()
 
-       // val wordDao: WordDao
+       // val word = Word("1","Lukoil","95")
+      //  wordDao.insert(word)
+
 
 
 
