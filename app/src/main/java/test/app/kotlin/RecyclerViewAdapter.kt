@@ -6,19 +6,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import test.app.kotlin.bdroom.Word
+import test.app.kotlin.bdroom.WordDao
+import test.app.kotlin.bdroom.WordRoomDatabase
 
 class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
 
-    private var words = emptyList<Word>() // Cached copy of words
+    private var words = emptyList<Word>()
 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-       // val current = words[position]
-        holder.mtitle.text = "k;kl"
+        val current= words[position]
+        holder.mtitle.text = current.text
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return words.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

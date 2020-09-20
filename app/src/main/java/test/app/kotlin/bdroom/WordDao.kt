@@ -8,8 +8,8 @@ import androidx.room.Query
 
 @Dao
 interface WordDao {
-    @Query("SELECT * from word_table")
-    fun getAll(): List<Word>
+    @Query("SELECT word from word_table")
+    fun getAll(): List<String>
 
     @Query("SELECT number from word_table")
     fun getNumbers(): List<String>

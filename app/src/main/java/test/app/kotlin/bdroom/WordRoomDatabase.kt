@@ -10,7 +10,6 @@ import androidx.room.RoomDatabase
     abstract class WordRoomDatabase : RoomDatabase() {
     abstract fun wordDao(): WordDao
 
-    /*
     companion object {
 
         @Volatile
@@ -33,5 +32,5 @@ import androidx.room.RoomDatabase
         }
     }
 
-     */
+
 }

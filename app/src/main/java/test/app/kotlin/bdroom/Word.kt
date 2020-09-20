@@ -8,13 +8,13 @@ import androidx.room.PrimaryKey
 @Entity (tableName = "word_table")
 data class Word(
 
-    @PrimaryKey val uid: String,
+    @PrimaryKey val uid: Int,
 
     @ColumnInfo(name = "word")
-    var text: String?,
+    val text: String?,
 
     @ColumnInfo(name = "number")
-    var numb: String?
+    val numb: String?
 )
 
 
