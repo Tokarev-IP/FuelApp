@@ -15,12 +15,13 @@ class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val current= words[position]
-        holder.mtitle.text = current.text
+      //  val current= words[position]
+       holder.mtitle.text = words.size.toString()
     }
 
     override fun getItemCount(): Int {
-        return words.size
+        return 10
+        //words.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -35,7 +36,6 @@ class RecyclerViewAdapter() : RecyclerView.Adapter<MyViewHolder>() {
         this.words = words
         notifyDataSetChanged()
     }
-
 }
 
 class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

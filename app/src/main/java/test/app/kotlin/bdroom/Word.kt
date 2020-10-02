@@ -11,10 +11,10 @@ data class Word(
     @PrimaryKey val uid: Int,
 
     @ColumnInfo(name = "word")
-    val text: String?,
+    val text: String,
 
     @ColumnInfo(name = "number")
-    val numb: String?
+    val numb: String
 )
 
 

@@ -12,7 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import test.app.kotlin.bdroom.Word
 import test.app.kotlin.bdroom.WordDao
 import test.app.kotlin.bdroom.WordRoomDatabase
-
+import kotlin.concurrent.thread
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = RecyclerViewAdapter()
+
+       // val mtext:TextView=findViewById(R.id.text_word)
 
         val floatButton = findViewById<FloatingActionButton>(R.id.floating_button)
 
@@ -37,28 +39,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-/*
-        val dl = Room.databaseBuilder(
-            applicationContext,
-            WordRoomDatabase::class.java,"database")
-            .allowMainThreadQueries()
-            .build()
+        val db=WordRoomDatabase.getDatabase(applicationContext)
 
-        val wordDao: WordDao = dl.wordDao()
+        val wordDao: WordDao = db.wordDao()
 
-        val mtext:TextView=findViewById(R.id.text_word)
 
-        wordDao.deleteAll()
-       mtext.text = wordDao.getAll()[1]
 
-        val mword = Word(
-            "5",
-            "90",
-            "Gaz"
-        )
-        wordDao.insert(mword)
 
- */
+      //mtext.text = wordDao.getAll()[1]
+
+
+      //  thread {wordDao.insert(Word(100,"15","fghjgfj") ) }
+
+
+
+
+
+        
+
+
+
+
+
 
     }
 }

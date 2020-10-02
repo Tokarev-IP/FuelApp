@@ -37,11 +37,15 @@ class FragmentAdd: Fragment() {
 
         buttonOK.setOnClickListener{
 
+
+            /*
             val dl = Room.databaseBuilder(
                 context!!.applicationContext,
                 WordRoomDatabase::class.java,"database")
                 .allowMainThreadQueries()
                 .build()
+
+             */
 
             val number=editPrice1.text.toString()
 
@@ -49,6 +53,7 @@ class FragmentAdd: Fragment() {
             val edit_text2: String = editPrice2.text.toString()
             val edit_text3: String = editPrice3.text.toString()
 
+            /*
             val wordDao: WordDao = dl.wordDao()
 
             val mword = Word(
@@ -57,6 +62,8 @@ class FragmentAdd: Fragment() {
                 edit_text3
             )
             wordDao.insert(mword)
+
+             */
 
            // closeFragment(savedInstanceState)
         }
